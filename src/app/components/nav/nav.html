@@ -1,0 +1,26 @@
+<nav [class.scrolled]="scrolled">
+  <div class="nav__inner">
+    <div class="nav__logo" (click)="scrollTo('hero')">
+      <span class="logo-name">[AT]</span>
+    </div>
+    <ul class="nav__links">
+      @for (link of links; track $index) {
+        <li>
+          <a (click)="scrollTo(link)">{{ link }}</a>
+        </li>
+      }
+    </ul>
+    <button class="nav__hamburger" [class.open]="menuOpen" (click)="menuOpen = !menuOpen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" [class.open]="menuOpen">
+    <ul>
+      @for (link of links; track $index) {
+        <li>
+          <a (click)="scrollTo(link)">{{ link }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+</nav>
