@@ -1,0 +1,86 @@
+.about {
+  padding: 8rem 2.5rem;
+  background: linear-gradient(to bottom, transparent, rgba(184,234,197,0.12), transparent);
+}
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  @media (max-width: 900px) { grid-template-columns: 1fr; gap: 3rem; }
+}
+.about__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 1.75rem;
+  em { font-style: italic; color: var(--accent); }
+}
+.about__bio {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+.about__cta { margin-top: 2.25rem; }
+.btn-outline {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  background: transparent;
+  &:hover { background: var(--accent); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(56,178,90,0.28); }
+}
+
+.highlight {
+  padding: 1.5rem;
+  border-radius: 18px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
+  &:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(56,178,90,0.12); }
+}
+
+.me-image{
+  border-radius: 6px;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+  transition:
+  transform 0.5s ease,
+  box-shadow 0.5s ease;
+
+}
+
+.me-image:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.12),
+    0 0 0 1px rgba(255,255,255,0.7);
+}
+
+img.framed {
+  box-shadow:
+    -50px -50px 0 -40px var(--accent),
+    50px 50px 0 -40px var(--accent);
+}
+
+.highlight__content {
+  h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--text-primary); }
+  p  { font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted); line-height: 1.5; }
+}

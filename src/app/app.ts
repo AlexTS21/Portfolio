@@ -2,10 +2,11 @@ import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Hero } from './components/hero/hero';
 import { Nav } from './components/nav/nav';
+import { About } from './components/about/about';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Hero, Nav],
+  imports: [RouterOutlet, Hero, Nav, About],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
