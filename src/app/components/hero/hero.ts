@@ -307,5 +307,9 @@ export class Hero implements AfterViewInit, OnDestroy {
   scrollToProjects() {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   }
+
+  scrollToContact() {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
