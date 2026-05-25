@@ -1,0 +1,198 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to right,
+      rgba(247,251,248,0.88) 0%,
+      rgba(247,251,248,0.65) 45%,
+      transparent 70%
+    ),
+    linear-gradient(to bottom,
+      rgba(247,251,248,0.4) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(247,251,248,0.6) 100%
+    );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  padding-top: 5rem;
+  width: 100%;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 1.75rem;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse-dot 2.2s ease infinite;
+}
+
+/* Title */
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin-bottom: 1.75rem;
+
+  .line { display: block; }
+
+  em {
+    display: block;
+    background: linear-gradient(125deg, #289445 0%, #408753 45%, #38b25a 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3.5s linear infinite;
+  }
+}
+
+.hero__desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 440px;
+  line-height: 1.75;
+  margin-bottom: 2.25rem;
+  font-weight: 400;
+}
+
+
+.hero__actions {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.9rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(56,178,90,0.32);
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+
+  &:hover {
+    background: var(--pastel-600);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(56,178,90,0.4);
+  }
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.9rem;
+  border-radius: 10px;
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 1px solid var(--glass-border);
+  &:hover { background: var(--accent-light); }
+}
+
+.hero__stats { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+
+.stat {
+  padding: 0.9rem 1.4rem;
+  border-radius: 14px;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+  &:hover { transform: translateY(-3px); }
+}
+
+.stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  z-index: 3;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 42px;
+  background: linear-gradient(to bottom, transparent, var(--accent));
+  animation: float 2s ease infinite;
+}
+
+.scroll-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
