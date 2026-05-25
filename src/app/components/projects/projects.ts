@@ -38,7 +38,7 @@ export class Projects {
       link: 'https://iblastm.github.io/MetodosNumericosPage/'
     },
     {
-      title: 'Predictive Analytics SaaS',
+      title: 'Predictive Diabetes Test',
       tag: 'Web ML',
       year: '2024',
       desc: 'Web-based test for the preliminary detection of diabetes using supervised learning (decision trees) with 94% accuracy',

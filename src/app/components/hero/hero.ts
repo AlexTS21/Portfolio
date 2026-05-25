@@ -304,8 +304,8 @@ export class Hero implements AfterViewInit, OnDestroy {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
-  scrollToAbout() {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  scrollToProjects() {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   }
 }
 

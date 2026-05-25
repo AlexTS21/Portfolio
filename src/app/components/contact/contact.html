@@ -1,0 +1,37 @@
+<section id="contact" class="contact">
+  <div class="contact__container">
+    <div class="contact__header fade-in">
+      <div class="section-tag">
+        <span class="tag-line"></span>
+        <span class="tag-text">Contact</span>
+      </div>
+      <h2 class="section-title">Let's Build<br><em>Something Together</em></h2>
+    </div>
+
+    <div class="contact__layout fade-in">
+      <div class="contact__info">
+        <p class="contact__bio">
+          Whether you have a machine learning challenge, a web project idea, or just want to connect — my inbox is open.
+        </p>
+        <a href="alejanafs28@gmail.com" class="email-link">
+          <span class="email-icon">✉</span>
+          alejanafs28@gmail.com
+        </a>
+         <a href="tel:+522213599086" class="email-link">
+          <span class="email-icon">☎</span>
+          +52 221 359 9086
+        </a>
+
+        <div class="socials">
+          <a class="social-btn glass" *ngFor="let s of socials" [href]="s.url" target="_blank" [title]="s.label">
+            {{ s.icon }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact__footer">
+      <p class="footer-copy">Jose Alejandro Tejeda Sanchez {{ currentYear }}</p>
+    </div>
+  </div>
+</section>
