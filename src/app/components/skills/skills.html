@@ -1,0 +1,33 @@
+<section id="skills" class="skills">
+  <div class="skills__container">
+    <div class="skills__header fade-in">
+      <div class="section-tag">
+        <span class="tag-line"></span>
+        <span class="tag-text">Skills</span>
+      </div>
+      <h2 class="section-title">Tech Stack</h2>
+    </div>
+
+    <div class="skills__grid">
+      @for (cat of categories; track $index) {
+        <div class="skill-category glass fade-in">
+          <div class="cat-header">
+            <span class="cat-icon"></span>
+            <h3>{{ cat.name }}</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar" *ngFor="let s of cat.skills">
+              <div class="skill-bar__info">
+                <span class="skill-name">{{ s.name }}</span>
+                <span class="skill-pct">{{ s.level }}%</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" [style.width]="s.level + '%'"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
